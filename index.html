@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>Cow Clicker</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1 class ="h1">Click The Cow!</h1>
+      <!-- cow -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Cow_cartoon_04.svg" id="cow" alt="Cow Clicker">
+      <!-- counter -->
+      <div class="counter">
+        <p class="counterHTML"></p>
+      </div>
+    </div>
+
+    <script>
+  // event listener linking cow and clicker
+    const cowButton = document.getElementById("cow");
+    let cowCounter = document.getElementsByClassName("counterHTML");
+    let startAtZero = cowCounter.innerHTML;
+    cowCounter[0].innerHTML = 0
+    startAtZero = 1
+
+    cowButton.addEventListener("click", () => {
+    cowCounter[0].innerHTML = startAtZero++
+    })
+    </script>
+
+    <style media="screen">
+      #cow {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 8%;
+        width: 25%;
+      }
+
+      .counter {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 6%;
+        width: 25%;
+        font-size: 60px;
+        text-align: center;
+      }
+
+      .h1 {
+        text-align: center;
+        font-size: 3em;
+      }
+    </style>
+  </body>
+</html>
